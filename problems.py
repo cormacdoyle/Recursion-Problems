@@ -46,19 +46,7 @@ def recMin(nestedLis):
         if minNum < nestedLis[0]:
             nestedLis[0] = minNum
         return nestedLis[0]
-    '''
-    nestedLis = mergeList(nestedLis)
-    length = len(nestedLis) - 1
-    if i == length:
-        return highestVal
-    else:
-        highestVal = nestedLis[0]
-        if nestedLis[i] < highestVal:
-            nestedLis[i] = highestVal
-            i+=1
-            return recMin(nestedLis, highestVal, i)
-    '''
-
+    
 def addNext(n, count = 0):
     if n>0:
         count += n
