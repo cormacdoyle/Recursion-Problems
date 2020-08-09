@@ -1,21 +1,36 @@
 '''
-This function runs at a computional complexity of O(n) because there is only for loop.
-Since for every index, there is one new x. We can further prove that mystery() is an
-O(n) function by including a counter that adds one for every time the for loop in the
-function runs. This counter will always be equal to the size of the inputted list.
-Therefore, the loop runs only as many times as there are items in the input, which
-means the function is linear or O(n).
+Assignment 4: Recursion and Complexity
+By: Cormac Doyle
+Student Number: 20152002
+
+This program includes 6 recursive problems (and any functions that they rely on) and
+one computational complexity question. Each problem function has a description
+explaining what it does.
+
+Computational Complexity Question: (This question asks us to identify the complexity
+of this mystery function and provide an explanation to our answer)
+
+This function runs at roughly T(n) = 5n (5 operations within the for loop) + 2 (2 
+operations outside the loop). This means the function has a big O of O(n) because
+we take the n with the largest degree and don't worry about coefficients. The
+program only has one loop which and the variable controlling the loop has not been
+manipulated in any way because it is simply the length of the input list. This means
+that the elements of the input list will only run once (worst case). Since for every
+index, there is one new x. We can further prove that mystery() is an O(n) function 
+by including a counter that counts every time the for loop in the function
+runs. This counter will always be equal to the size of the inputted list. Therefore,
+the loop runs only as many times as there are items in the input, which means the
+function is linear or O(n).
 '''
-def mystery(lis, i=0):
+def mystery(lis):
     n = len(lis)
 
     for index in range(n):
-        i+=1
         x = 2*index % n
 
         lis[index],lis[x] = lis[x],lis[index]
 
-    print(lis, i)
+    print(lis)
 '''
 This function takes a non-negative integer as its paramater and returns the number of
 pairs of numbers within the integer that sum to 10.
@@ -225,7 +240,7 @@ def unitTest():
     print("For input", 19, [1, 2, 5, 12, 14, 18], ",should return 1,", calcStamp(18, [1, 2, 5, 12, 14, 18]))
     print("For input", [1, 2, 5, 12, 14, 18], 19,",should return Invalid, please enter an integer followed by a list", calcStamp([1, 2, 5, 12, 14, 18], 19))
     print("For input", 'This List', 0, ",should return Invalid, please enter an integer followed by a list,", calcStamp('This list', 0))
-    
+
 def main():
     unitTest()
 
