@@ -225,6 +225,7 @@ def unitTest():
     print("\nTesting Swap Elements:")
     print("For input", [3,8,2,1], ",should return [8,3,1,2],", swapElements([3,8,2,1]))
     print("For input", [3,8,2,1,5], ",should return [8,3,1,2,5],", swapElements([3,8,2,1,5]))
+    print("For input", [], ",should return [],", swapElements([]))
     print("For input", 'This String', ",should return Please enter a list,", swapElements('This String'))
     print("For input", 5, ",should return Please enter a list,", swapElements(5))
 
